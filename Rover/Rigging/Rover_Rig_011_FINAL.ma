@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Rover_Rig_011_FINAL.ma
-//Last modified: Mon, Aug 27, 2018 01:07:16 PM
+//Last modified: Mon, Aug 27, 2018 01:13:01 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "stereoCamera" "10.0";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DACA31D1-4E77-DF28-A881-0CB78CF3576F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 148.07377569684644 221.96993675921831 -393.24069767681073 ;
-	setAttr ".r" -type "double3" -21.938352736229564 -1280.2000000000714 0 ;
+	setAttr ".t" -type "double3" -197.75832247827753 261.17868325964878 -393.67240880817553 ;
+	setAttr ".r" -type "double3" -26.738352736240664 -1232.9999999999745 0 ;
 	setAttr ".rp" -type "double3" 0 -3.5527136788005009e-15 -7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" 1.3461249746670107e-15 -1.3332362816217042e-15 6.2806217314992313e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -24,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 403.49689233752576;
+	setAttr ".coi" 454.01546094316984;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -33334,6 +33334,10 @@ createNode joint -n "Instrument_Arm_02_Jnt" -p "Instrument_Arm_01_Jnt";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
@@ -44316,6 +44320,8 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "RoverShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RoverShape.iog.og[0].gco";
 connectAttr "skinCluster1GroupId.id" "RoverShape.iog.og[1].gid";
