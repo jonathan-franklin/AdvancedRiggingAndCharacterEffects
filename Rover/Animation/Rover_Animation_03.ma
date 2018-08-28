@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Rover_Animation_02.ma
-//Last modified: Tue, Aug 28, 2018 10:09:01 AM
+//Name: Rover_Animation_03.ma
+//Last modified: Tue, Aug 28, 2018 10:09:10 AM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -47364,4 +47364,4 @@ connectAttr "Instrument_Arm_05_Jnt.bps" "bindPose1.wm[29]";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "RoverShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
-// End of Rover_Animation_02.ma
+// End of Rover_Animation_03.ma
