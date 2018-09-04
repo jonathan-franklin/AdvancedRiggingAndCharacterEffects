@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: SpiderBot_Rig_009_FINAL.ma
-//Last modified: Tue, Sep 04, 2018 01:05:35 PM
+//Name: SpiderBot_Animation_01.ma
+//Last modified: Tue, Sep 04, 2018 02:37:59 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "2.0.1";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2C7FB34D-47D8-3F54-99F3-53B1CD23A427";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.8300540660175511 15.880306938999963 42.676960919814896 ;
-	setAttr ".r" -type "double3" 706.46164718308876 -2168.6000000017484 -6.031354277033082e-16 ;
+	setAttr ".t" -type "double3" 25.73321012891655 50.385054532837643 8.4231738642800682 ;
+	setAttr ".r" -type "double3" 655.46164718298439 -2091.4000000016717 -8.7167910312534211e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "113807D5-483A-E7F6-4060-27B347736CC2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 45.890273989188408;
+	setAttr ".coi" 55.048203366748169;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -17668,4 +17668,4 @@ connectAttr "SpiderBot_P2D.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "SpiderBot1F.msg" ":defaultTextureList1.tx" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of SpiderBot_Rig_009_FINAL.ma
+// End of SpiderBot_Animation_01.ma
